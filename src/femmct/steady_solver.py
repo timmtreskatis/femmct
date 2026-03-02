@@ -1,23 +1,15 @@
 import numpy as np
 
 from dolfinx import fem
-from dolfinx.fem.petsc import LinearProblem, NonlinearProblem
+from dolfinx.fem.petsc import LinearProblem
 from basix.ufl import element
 from ufl import (
-    avg,
-    conditional,
-    dot,
-    dS,
     dx,
     sym,
     grad,
     div,
     inner,
-    jump,
-    outer,
-    FacetArea,
     FacetNormal,
-    Identity,
     Measure,
     TrialFunction,
     TestFunction,
@@ -25,7 +17,7 @@ from ufl import (
 )
 
 from femmct.configuration import SimulationConfig
-from femmct.fluids import Fluid, NewtonianFluid, OldroydBFluid, ThreeFieldNewtonianFluid, WhiteMetznerFluid
+from femmct.fluids import Fluid, NewtonianFluid, ThreeFieldNewtonianFluid
 
 
 def setup_function_spaces(domain, fluid_model: Fluid, degree: int = 2):

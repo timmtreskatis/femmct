@@ -20,10 +20,11 @@ jobs:
         uses: conda-incubator/setup-miniconda@v3
         with:
           auto-update-conda: true
-          auto-activate-base: true
+          auto-activate: false
           activate-environment: femmct-fenicsx
           environment-file: environment.yml
           channels: conda-forge
+          conda-remove-defaults: true
 
       - name: Install package
         run: |
