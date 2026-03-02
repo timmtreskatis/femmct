@@ -7,14 +7,15 @@ For work-in-progress documentation, see https://femmct.readthedocs.io/
 
 ## Installation
 
-Create a python virtual environment and activate it.
+Clone the repository and create the Conda environment:
 
-Then, install fenics/dolfin. Follow the instructions on https://fenics.readthedocs.io/en/latest/installation.html (we use the development version). Clone the git repositories, and pip install them inside the activated python environment. If you apt install libdolfin-dev, you can skip the cmake of dolfin.
-
-To build mshr: apt install libgmp-dev libmpfr-dev (mshr is no longer in debian testing).
-
-The requirements.txt file here was created using
+```bash
+conda env create -f environment.yml
+conda activate femmct-fenicsx
 ```
-  pip list --format=freeze >requirements.txt
+
+Then install the package locally:
+
+```bash
+pip install -e .
 ```
-instead of pip freeze.

@@ -1,0 +1,13 @@
+name: femmct-fenicsx
+channels:
+  - https://conda.anaconda.org/conda-forge
+dependencies:
+  - python=3.14
+  - fenics-dolfinx=0.10.0
+  - mpich
+  - pytest
+  - pytest-cov
+  - gmsh
+  - python-gmsh
+  - snakeviz
+  - ruff>=0.15.0

@@ -1,0 +1,9 @@
+[project]
+name = "femmct"
+version = "0.2.0"
+description = "Finite-Element Method solver combined with the mode-coupling theory of the glass transition, to predict flow properties of viscoelastic shear-thinning / yield-stress fluids using a microscopically derived constitutive equation."
+readme = "README.md"
+requires-python = ">=3.14"
+
+[tool.setuptools.packages.find]
+where = ["src"]
